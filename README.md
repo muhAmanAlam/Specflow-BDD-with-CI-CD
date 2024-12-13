@@ -1,6 +1,4 @@
-This is Task 01 of the two tasks assigned to me by the Next Basket Team
-
-The Task is performed using a Keyword-Driven C# based Web and API automation framework implementing: 
+This is a Keyword-Driven C# based Web and API automation framework implementing: 
 * Specflow
 * Selenium WebDriver
 * ExtentReports
@@ -11,22 +9,7 @@ The Task is performed using a Keyword-Driven C# based Web and API automation fra
 3. Build the solution and select run all tests in the test explorer. (If tests do not appear the first time make sure to click the run all tests button again  *this is a bug with SpecFlow)
 
 
-## Task 1.1
-This task is present as a Scenario in the Task01.feature file in the \testing\Features folder.
-
-![teaser](./.images/image1.jpg)
-
-## Task 1.2
-This task is present as a Scenario in the Task01.feature file in the \testing\Features folder.
-
-![teaser](./.images/image1.jpg)
-
-## Task 1.3
-This task is present as a Text file called TestCases.txt file at the root of this repository.
-## Task 1.4
-This task is present as a Text file called Bugs.txt file at the root of this repository.
-
-# Additional Tasks
+# Additional Features
 1. An Azure DevOps CI/CD Pipelne azure-pipeline.yml is also present at the root of this repository. Here are Screenshots from the Azure Devops Project this repository is connected to. (I cannot share the link to Azure Devops project as it is private by default and there is no way to make it public).
 
 ![teaser](./.images/image3.jpg)
