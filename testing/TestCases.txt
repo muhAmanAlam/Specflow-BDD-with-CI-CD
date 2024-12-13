@@ -1,0 +1,101 @@
+Test Cases
+
+Test Case 1: Successful Checkout to office pargo
+
+Feature: Checkout
+
+    Scenario: 1. Successful checkout to office pargo with valid personal data
+	Given User Navigates to 'https://teststoreforsouthafri.nextbasket.shop/'
+	Then User Hovers over 'non_promo_product'
+	And User Clicks on 'buy_btn'
+	Then User Clicks on 'goto_payment_btn'
+	Then User Clicks on 'continue_as_guest_btn'
+	Then User Enters 'Muhammad' in 'name_input'
+	And User Enters 'Aman' in 'surname_input'
+	And User Enters '123456789' in 'phone_input'
+	Then User Enters 'South Africas' in 'country_input'
+	And User Enters 'Alberton ' in 'city_input'
+	Then User Selects 'officepargo_radio' option
+	And User Enters 'TestAddress' in address
+	Then 'checkout_btn' should be visible
+	And User Clicks on 'checkout_btn'
+	Then 'thankyou_heading' should be visible
+
+
+    Scenario: 2. Unsuccessful checkout with invalid personal data (Negative Test Case)
+	Given User Navigates to 'https://teststoreforsouthafri.nextbasket.shop/'
+	Then User Hovers over 'non_promo_product'
+	And User Clicks on 'buy_btn'
+	Then User Clicks on 'goto_payment_btn'
+	Then User Clicks on 'continue_as_guest_btn'
+	Then User Enters '123' in 'name_input'
+	And User Enters '456' in 'surname_input'
+	And User Enters 'abc' in 'phone_input'
+	Then User Enters 'London' in 'country_input'
+	And User Enters 'United States' in 'city_input'
+	And User Enters '1234' in address
+	And User Clicks on 'checkout_btn'
+	Then 'invalid_data_error_message' should be visible
+	
+
+    Scenario: 3. Error Messages are displayed with invalid personal data during checkout (Negative Test Case)
+	Given User Navigates to 'https://teststoreforsouthafri.nextbasket.shop/'
+	Then User Hovers over 'non_promo_product'
+	And User Clicks on 'buy_btn'
+	Then User Clicks on 'goto_payment_btn'
+	Then User Clicks on 'continue_as_guest_btn'
+	Then User Enters '123' in 'name_input'
+	Then 'name_invalid_message_label' should be displayed
+	And User Enters '456' in 'surname_input
+	Then 'surname_invalid_message_label' should be displayed'
+	And User Enters 'abc' in 'phone_input'
+	Then 'phone_invalid_message_label' should be displayed
+	Then User Enters 'abc' in 'country_input
+	Then 'country_invalid_message_label' should be displayed'
+	And User Enters 'xyz' in 'city_input'
+	Then 'city_invalid_message_label' should be displayed
+	Then User Selects 'officepargo_radio' option
+	And User Enters '1234' in address
+	And User Clicks on 'checkout_btn'
+	Then 'invalid_data_error_message' should be visible
+
+    Scenario: 4. Successful checkout with promo code
+	Given User Navigates to 'https://teststoreforsouthafri.nextbasket.shop/'
+	Then User Hovers over 'non_promo_product'
+	And User Clicks on 'buy_btn'
+	Then User Clicks on 'goto_payment_btn'
+	Then User Clicks on 'continue_as_guest_btn'
+	Then User Enters 'Muhammad' in 'name_input'
+	And User Enters 'Aman' in 'surname_input'
+	And User Enters '123456789' in 'phone_input'
+	Then User Enters 'South Africas' in 'country_input'
+	And User Enters 'Alberton ' in 'city_input'
+	Then User Selects 'officepargo_radio' option
+	And User Enters 'TestAddress' in 'address_input'
+	Then User Enters 'NBpromo30' in 'promo_code_input'
+	And User Clicks on 'apply_promo_btn'
+	Then 'promo_applied_label' should be visible
+	And User Clicks on 'checkout_btn'
+	Then 'thankyou_heading' should be visible
+
+    Scenario: 5. Successful checkout with multiple products
+	Given User Navigates to 'https://teststoreforsouthafri.nextbasket.shop/'
+	Then User Hovers over 'non_promo_product'
+	And User Clicks on 'buy_btn'
+	Then User Hovers over 'promo_product'
+	And User Clicks on 'buy_btn'
+	Then User Clicks on 'goto_payment_btn'
+	Then User Clicks on 'continue_as_guest_btn'
+	Then 'your_products_heading' should be visible
+	And 'non_promo_product_cart_listing_label' should be visible
+	And 'promo_product_cart_listing_label' should be visible
+	Then User Enters 'Muhammad' in 'name_input'
+	And User Enters 'Aman' in 'surname_input'
+	And User Enters '123456789' in 'phone_input'
+	Then User Enters 'South Africas' in 'country_input'
+	And User Enters 'Alberton ' in 'city_input'
+	Then User Selects 'officepargo_radio' option
+	And User Enters 'TestAddress' in address
+	Then 'checkout_btn' should be visible
+	And User Clicks on 'checkout_btn'
+	Then 'thankyou_heading' should be visible

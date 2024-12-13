@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xPaths>
+	
+	<nextBasketSouthAfrica>
+		<item key='accept_all_btn' value="//button[contains(text(),'Accept all')]"/>
+		
+		
+		<!--Locators for Test Case 1-->
+		
+		<item key='non_promo_product' value="//div[@data-testid='productCardContainer' and not(.//p[contains(text(),'-')])]"/>
+		<item key='buy_btn' value="//div[@data-testid='productCardContainer' and not(.//p[contains(text(),'-')])]//button[contains(text(),'Buy')]"/>
+
+		<item key='added_notification' value="//p[contains(text(),'een added to your basket')]"/>
+		<item key='basket_menu_btn' value="//button[@aria-label='Open basket menu']"/>
+		<item key='goto_payment_btn' value="//a[@text='Go to payment']"/>
+		
+		<item key='guest_email_input' value="//input[@name='email']"/>
+		<item key='continue_as_guest_btn' value="//button[@data-testid='guestLogin']"/>
+		
+		<item key='confirm_order_btn' value="//button[@data-testid='goToNextStep']"/>
+		<item key='name_input' value="//input[@name='shippingAddress.firstName']"/>
+		<item key='surname_input' value="//input[@name='shippingAddress.lastName']"/>
+		<item key='phone_input' value="//input[@name='shippingAddress.phone']"/>
+		
+		<item key='country_input' value="//div[@data-testid='countryField']/div/div/input"/>
+		<item key='country_option' value="//p[contains(text(),'South Africa')]"/>
+		
+		<item key='city_input' value="(//p[text()='Delivery address']/following-sibling::div//input)[2]"/>
+		<item key='city_option' value="//p[contains(text(),'Alberton')]"/>
+		
+		<item key='phone_input' value="//input[@name='shippingAddress.phone']"/>
+		<item key='officepargo_option' value="//label[contains(@for,'To office pargo')]"/>
+		
+		<item key='delivery_office_input' value="//p[text()='Delivery office']/following-sibling::div//input"/>
+		<item key='delivery_office_option' value="//p[text()='Address1']"/>
+		
+		<item key='delivery_cost' value="//div[@data-testid='costOfDeliveryRadioGroup']"/>
+		<item key='thankyou_heading' value="//h1[text()='Thank you!']"/>
+
+
+		
+
+		<!--Locators for Test Case 2-->
+		
+		<item key='50_percent_promo_label' value="//p[contains(text(),'-50 %')]/parent::div"/>
+		<item key='50_percent_promo_product' value="//div[@data-testid='productCardContainer' and .//p[contains(text(),'-50 %')]]"/>
+	
+	</nextBasketSouthAfrica>
+	
+</xPaths>

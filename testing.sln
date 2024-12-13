@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testing", "testing\testing.csproj", "{7E423B49-C98A-4FA3-BA09-5FC1DC1AC9F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{79C54684-D171-4007-A5C0-F9C1160C4249}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
+		Bugs.txt = Bugs.txt
+		LICENSE.txt = LICENSE.txt
+		TestCases.txt = TestCases.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E423B49-C98A-4FA3-BA09-5FC1DC1AC9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E423B49-C98A-4FA3-BA09-5FC1DC1AC9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E423B49-C98A-4FA3-BA09-5FC1DC1AC9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E423B49-C98A-4FA3-BA09-5FC1DC1AC9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {951C3FEA-E393-4828-A6C4-2C74DDFAA5E9}
+	EndGlobalSection
+EndGlobal

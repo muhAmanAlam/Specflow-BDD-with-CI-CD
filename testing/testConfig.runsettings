@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Configurations for SpecRun -->
+  <SpecRun>
+    <!-- SpecRun uses VisualStudo.srprofile or TFS.srprofile by default, or the Default.srprofile if these don't exist. -->
+     <Profile>Azure.srprofile</Profile>
+    </SpecRun>
+</RunSettings>

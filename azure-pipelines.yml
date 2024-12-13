@@ -1,0 +1,45 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+# trigger:
+# - main
+
+pool: Automation Agents
+
+steps:
+- task: NuGetCommand@2
+  displayName: 'Restore NuGet Pakages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'config'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build Project'
+  inputs:
+    command: 'build'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Run Tests'
+  inputs:
+    command: 'test'
+    testRunTitle: 'SpecFlow Tests'
+  
+
+# - task: SpecFlowPlus@0
+#   displayName: 'Generate and Publish SpecFlow+ LivingDoc'
+#   condition: succeededOrFailed()
+#   inputs:
+#     generatorSource: 'FeatureFolder'
+#     projectFilePath: 'testing'
+#     testExecutionJson: '$(Build.SourcesDirectory)\testing\bin\Debug\TestExecution.json'
+  
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Report Artifact'
+  condition: succeededOrFailed()
+  inputs:
+    pathtoPublish: 'testing/Report'
+    artifactName: 'TestReport'
